@@ -1,0 +1,90 @@
+body {
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/login-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    transition: background-color 0.3s linear 0s;
+}
+
+header.stick {
+    background-color: #212121;
+    transition: background-color 0.3s linear 0s;
+}
+
+.logo {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo img {
+    height: 20px;
+    margin: 25px 15px 25px 0;
+}
+
+.social {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.social img {
+    height: 142px;
+    margin: 43px 4px 24px 85px;
+}
+
+.info {
+    margin-left: 21%;
+    color: chocolate;
+}
+
+.desc-section {
+    width: 114%;
+    padding: 180px 250px;
+}
+
+.desc-section h3 {
+    color: rgb(255, 255, 255);
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 3em;
+}
+
+.result-section {
+    width: 100%;
+    padding: 106px 40px;
+}
+
+span {
+    padding: 220px 250px;
+}
+
+img.card-img-top {
+    width: 400px;
+    max-height: 180px;
+}
+
+.card-text {
+    white-space: nowrap;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+#myChart {
+    width: 1003px !important;
+    height: 700px !important;
+    margin: 9%;
+}
