@@ -12,13 +12,6 @@ var myFunc = function(arg) {
     /* method is GET */
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-
-    /* method is POST */
-    // This method id left blank due to the nature of the social media links
-    // as they give a "Page not found" for broken links. making it quite impossible to make 
-    // either like or post a comment.
-
-    // xmlhttp.open("POST", url, true);
 }
 
 // This function is designed just to display datas/activities
@@ -106,10 +99,13 @@ function display(arr, arg) {
     var myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: date.slice(0,6),
+            labels: date,
             datasets: [{
                 label: provider.toUpperCase(),
-                data: shares.slice(0,6),
+                data: shares,
+                options: {
+                    responsive: true,
+                },
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
@@ -133,7 +129,7 @@ function display(arr, arg) {
             scales: {
                 yAxes: [{
                     ticks: {
-                        beginAtZero:true
+                        beginAtZero:false
                     }
                 }]
             }
