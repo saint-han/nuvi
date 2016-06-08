@@ -96,3 +96,11 @@ img.card-img-top {
 i.glyphicon.glyphicon-comment {
     top: -25px;
 }
+
+.blue-tooltip + .tooltip > .tooltip-inner {
+    background-color: #5274b5;
+}
+
+.blue-tooltip + .tooltip > .tooltip-arrow {
+    border-bottom-color: #5274b5;
+}
