@@ -16,15 +16,19 @@
         <h3>The Worlds Most Stunning Social Media <span>Marketing Suite.</span></h3>
         <div class="social">
             <p class="info"><em>Click on a social media of your choice to load media activities.</em></p>
-            <a href="facebook.html" class="social-click" target="_blank"><img src="../images/fb_circle.png"></a>
-            <a href="twitter.html" class="social-click" target="_blank"><img src="../images/TwitterIcon.png"></a>
-            <a href="instagram.html" class="social-click" target="_blank"><img src="../images/ig.png"></a>
+            <a href="facebook.html" class="social-click" target="_blank"><img src="../images/fb_circle.png" data-toggle="tooltip" data-placement="left" title="Click to view Facebook data"></a>
+            <a href="twitter.html" class="social-click" target="_blank"><img src="../images/TwitterIcon.png" data-toggle="tooltip" data-placement="bottom" title="Click to view Twitter data"></a>
+            <a href="instagram.html" class="social-click" target="_blank"><img src="../images/ig.png" data-toggle="tooltip" data-placement="right" title="Click to view Instagram data"></a>
         </div>
     </div>
-
 
     <script src="../script/jquery-1.12.4.min.js"></script>
     <script src="../css/bootstrap/js/bootstrap.js"></script>
     <script type="text/javascript" src="../script/main.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.querySelectorAll('[data-toggle="tooltip"]').tooltip();   
+        }
+    </script>
 </body>
 </html>

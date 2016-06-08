@@ -65,7 +65,7 @@ header.stick {
 
 .result-section {
     width: 100%;
-    padding: 106px 40px;
+    padding: 0px 40px;
 }
 
 span {
@@ -86,5 +86,13 @@ img.card-img-top {
 #myChart {
     width: 1003px !important;
     height: 700px !important;
-    margin: 9%;
+    margin: 15% 9%;
+}
+
+.activity_link {
+    float: right;
+}
+
+i.glyphicon.glyphicon-comment {
+    top: -25px;
 }

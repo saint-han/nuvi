@@ -9,8 +9,16 @@ var myFunc = function(arg) {
         }
     }
 
+    /* method is GET */
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+
+    /* method is POST */
+    // This method id left blank due to the nature of the social media links
+    // as they give a "Page not found" for broken links. making it quite impossible to make 
+    // either like or post a comment.
+
+    // xmlhttp.open("POST", url, true);
 }
 
 // This function is designed just to display datas/activities
@@ -18,7 +26,7 @@ var myFunc = function(arg) {
 function display(arr, arg) {
     var actor_username = "";
     var provider = "";
-    var provider_url = "";
+    var activity_url = "";
     var avatar = "";
     var activity_date = "";
     var activity_shares = "";
@@ -62,7 +70,7 @@ function display(arr, arg) {
             avatar.alt = "Card image cap";
 
             if(arr[i].activity_attachment == null) {
-                avatar.src = "../images/avatar.png";
+                avatar.src = "../images/profile-icon.png";
             }
             else {
                 avatar.src = arr[i].activity_attachment;
@@ -75,11 +83,22 @@ function display(arr, arg) {
             update.setAttribute("id", "card-text");
             update.innerHTML = "<small class='text-muted'>" + activity_date + "</small>";
 
+            var icon = document.createElement("i");
+            icon.setAttribute("class", "glyphicon glyphicon-comment");
+            icon.setAttribute("aria-hidden", "true");
+
+            activity_url = arr[i].activity_url;
+            activity_link = document.createElement("a");
+            activity_link.setAttribute("class", "activity_link");
+            activity_link.setAttribute("href", activity_url);
+            activity_link.appendChild(icon);
+
             document.getElementById('row').appendChild(column);
             column.appendChild(thumbnail);
             thumbnail.appendChild(avatar);
             thumbnail.appendChild(cardBlock);
             thumbnail.appendChild(update);
+            thumbnail.appendChild(activity_link)
         };
     };
 
